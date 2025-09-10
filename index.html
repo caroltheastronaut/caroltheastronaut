@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carol the Astronaut</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (opcional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Estilos simples para centralizar e dar aparência de Linktree */
+    body {
+      background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    .card-linktree {
+      max-width: 420px;
+      width: 100%;
+      border: none;
+      background: transparent;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid white;
+      box-shadow: 0 6px 20px rgba(16,24,40,0.08);
+      margin-top: -70px;
+    }
+    .card-body {
+      backdrop-filter: blur(6px);
+      background: rgba(255,255,255,0.90);
+      border-radius: 14px;
+      padding-top: 4.5rem;
+      padding-bottom: 1.5rem;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.06);
+    }
+    .btn-linktree {
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(2,6,23,0.06);
+      text-align: left;
+    }
+    .small-muted {
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <main class="card-linktree">
+    <div class="text-center mb-3">
+      <!-- White top spacing to emulate Linktree header -->
+      <div style="height:90px;"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-body text-center">
+        <!-- Profile image (substituir src pela imagem desejada) -->
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Profile" class="profile-img mx-auto d-block">
+        <h3 class="mt-3 mb-0">Carol the Astronaut</h3>
+        <p class="small-muted mb-3">UX/UI Designer & Illustrator</p>
+
+        <!-- Links principais como botões full-width -->
+        <div class="d-grid gap-2 px-3">
+          <a href="#" class="btn btn-primary btn-linktree btn-lg w-100"><i class="bi bi-box-arrow-up-right me-2"></i>Site Pessoal</a>
+          <a href="#" class="btn btn-outline-primary btn-linktree btn-lg w-100"><i class="bi bi-file-earmark-text me-2"></i>Portfolio</a>
+          <a href="#" class="btn btn-outline-secondary btn-linktree btn-lg w-100"><i class="bi bi-shop me-2"></i>Loja</a>
+          <a href="#" class="btn btn-outline-success btn-linktree btn-lg w-100"><i class="bi bi-instagram me-2"></i>Instagram</a>
+          <a href="#" class="btn btn-outline-info btn-linktree btn-lg w-100"><i class="bi bi-twitter me-2"></i>Twitter / X</a>
+        </div>
+
+        <!-- Pequena secção de redes sociais / contacto -->
+        <div class="mt-4 d-flex justify-content-center gap-3">
+          <a href="#" class="text-decoration-none small-muted"><i class="bi bi-envelope-fill"></i></a>
+          <a href="#" class="text-decoration-none small-muted"><i class="bi bi-telephone-fill"></i></a>
+          <a href="#" class="text-decoration-none small-muted"><i class="bi bi-link-45deg"></i></a>
+        </div>
+
+        <p class="mt-3 small text-muted">© <!-- ano --> <span id="year"></span> • Feito com ❤️</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Inserir ano atual automaticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Exemplo: substituir a imagem por uma local
+    // document.querySelector('.profile-img').src = 'imagens/meu-perfil.jpg';
+  </script>
+</body>
+</html>
